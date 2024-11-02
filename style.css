@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Pingüino {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+body {
+    background-color: rgb(148, 208, 228);
+}
+
+.cabeza, .cuerpo {
+    background-color: black;
+    display: flex;
+    position: relative;
+}
+
+.cabeza {
+    height: 180px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+.cuerpo {
+    height: 280px;
+    width: 200px;
+    top: -30px;
+    border-radius: 50% 50% 40% 40%;
+    align-content: center;
+}
+
+.cuerpo::before {
+    content: "";
+    background: white ;
+    width: 100px;
+    height: 180px;
+    border-radius: 50% 50% 40% 40%;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+}
+
+.ojo {
+    height: 45px;
+    width: 20px;
+    background: white;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 40px 0;
+    
+    position: absolute;
+    left: 38px;
+    top: 40px;
+}
+    /* iris */
+.ojo::before { 
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    width: 10px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    color: black;
+    box-shadow: 40px 0;
+}
+
+.pico {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid orange;
+    margin: 95px auto;
+    border-radius: 50%;
+}
+
+.pezuña {
+    display: flex;
+    position: absolute;
+    top: 250px;
+    left: 30px;
+
+    height: 60px;
+    width: 33px;
+    background: orange;
+    border-radius: 50% 50% 0 0;
+}
+
+.pezuña-r {
+    left: initial;
+    right: 30px;
+}
+
+.dedos {
+    position: absolute;
+    top: 45px;
+    right: 22px;
+
+    height: 20px;
+    width: 13px;
+    background:  rgb(148, 208, 228);
+    border-radius: 50% 50% 0 0;
+    box-shadow: 12px 0, 24px 0;
+    color:  rgb(148, 208, 228);
+}
+
+.aleta {
+    position: absolute;
+    top: 50px;
+    right: 140px;
+
+    height: 40px;
+    width: 120px;
+    background: red;
+    border-radius: 50%;
+    transform: rotate(25deg);
+}
+
+.aleta-r {
+    left: initial;
+    right: -140px;
+}
